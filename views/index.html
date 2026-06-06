@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App en la Nube</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tarjeta {
+            background-color: #16213e;
+            border: 2px solid #e94560;
+            border-radius: 8px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            color: white;
+        }
+
+        .titulo {
+            font-size: 26px;
+            color: #e94560;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e94560;
+            padding-bottom: 10px;
+        }
+
+        .info {
+            background-color: #0f3460;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .info span {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+        .info p {
+            font-size: 16px;
+            margin-top: 4px;
+            color: #ddd;
+        }
+
+        .estado {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #e94560;
+            border-radius: 6px;
+            font-size: 15px;
+            color: white;
+        }
+
+        #fecha {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <div class="titulo">🚀 Mi App en la Nube</div>
+
+        <div class="info">
+            <span>Nombre:</span>
+            <p>Jhon Jairo Parra</p>
+        </div>
+
+        <div class="info">
+            <span>Programa:</span>
+            <p>ADSO - Ficha: 3237727</p>
+        </div>
+
+        <div class="info">
+            <span>Nivel:</span>
+            <p>ADSO 35</p>
+        </div>
+
+        <div class="estado">
+            ✅ Aplicación corriendo desde la nube sin problemas
+        </div>
+
+        <p id="fecha"></p>
+    </div>
+
+    <script>
+        const ahora = new Date();
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("fecha").innerHTML =
+            "📅 " + ahora.toLocaleDateString('es-CO', opciones) + " — " +
+            ahora.toLocaleTimeString('es-CO');
+    </script>
+
+</body>
+</html>
